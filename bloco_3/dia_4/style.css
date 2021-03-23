@@ -1,0 +1,39 @@
+* {
+    background: deepskyblue;
+}
+.super-mario {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    
+
+}
+.goomba {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    margin-top: 300px
+    
+    
+}
+p{
+        position: absolute;
+        margin-left: 400px;
+        margin-top: 100px;
+        z-index: 1;
+        background: white;
+
+    }
+.baloon {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    margin-left: 350px;
+}
+.bowser {
+    width: 250px;
+    height: 250px;
+    margin-top: 205px;
+    margin-left: 550px;
+
+}
