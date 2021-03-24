@@ -8,6 +8,37 @@
 </head>
 <body>
     <script>
+        /*
+    Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas variáveis, a e b , definidas no começo com os valores que serão operados. Faça programas para:
+    Adição
+    Subtração
+    Multiplicação
+    Divisão
+    Módulo*/
+        var adicao = 5
+        var adicao01 = 4
+        var resultadoAdicao = adicao + adicao01
+        console.log(resultadoAdicao)
+
+
+        var subtracao = 9
+        var subtracao01 = 2
+        var resultadoSubtracao = subtracao - subtracao01
+        console.log(resultadoSubtracao)
+
+
+        var divisao = 81
+        var divisao01 = 9
+        var resultadoDivisao = divisao / divisao01
+        console.log(resultadoDivisao)
+
+        var multiplicacao = 5
+        var multiplicacao01 = 2
+        var resultadoMultiplicacao = multiplicacao * multiplicacao01
+        console.log(resultadoMultiplicacao)
+
+        /*
+        Faça um programa que retorne o maior de dois números. Defina no começo do programa duas variáveis com os valores que serão comparados.*/
         var valor01 = 5
         var valor02 = 23
         if(valor01 > valor02) {
@@ -16,7 +47,9 @@
         if(valor01 < 23) {
             console.log('maior numero é o valor02')
         }
+
         
+        /*Faça um programa que retorne o maior de três números. Defina no começo do programa três variáveis com os valores que serão comparados.*/
         var numeroPrimeiro = 5
         var numeroSegundo = 23
         var numeroTerceiro  = 45
@@ -31,6 +64,7 @@
             console.log('numero terceiro é o maior numero')
         }
 
+        /*Faça um programa que, dado um valor definido numa variável, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.*/
         var valor = -5 
 
         if(valor > 0) {
@@ -41,6 +75,20 @@
         }else{
             console.log(0)
         }
+        
+        /*
+        Faça um programa que defina três variáveis com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false , caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro. */
+        var lado01 = 25
+        var lado02 = 25
+        var lado03 = 25
+
+        if(lado01 === lado02 && lado01 === lado03){
+            triangulo = 'é triangulo'
+        }else {
+            triangulo = 'não é triangulo'
+        }
+
+        console.log(triangulo)
     </script>
 </body>
 </html>
