@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_01</title>
+</head>
+<body>
+    <script>
+        /*
+    Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas variáveis, a e b , definidas no começo com os valores que serão operados. Faça programas para:
+    Adição
+    Subtração
+    Multiplicação
+    Divisão
+    Módulo*/
+        var adicao = 5
+        var adicao01 = 4
+        var resultadoAdicao = adicao + adicao01
+        console.log(resultadoAdicao)
+
+
+        var subtracao = 9
+        var subtracao01 = 2
+        var resultadoSubtracao = subtracao - subtracao01
+        console.log(resultadoSubtracao)
+
+
+        var divisao = 81
+        var divisao01 = 9
+        var resultadoDivisao = divisao / divisao01
+        console.log(resultadoDivisao)
+
+        var multiplicacao = 5
+        var multiplicacao01 = 2
+        var resultadoMultiplicacao = multiplicacao * multiplicacao01
+        console.log(resultadoMultiplicacao)
+
+        /*
+        Faça um programa que retorne o maior de dois números. Defina no começo do programa duas variáveis com os valores que serão comparados.*/
+        var valor01 = 5
+        var valor02 = 23
+        if(valor01 > valor02) {
+            console.log('maiornumero é o valor01')
+        }else 
+        if(valor01 < 23) {
+            console.log('maior numero é o valor02')
+        }
+
+        
+        /*Faça um programa que retorne o maior de três números. Defina no começo do programa três variáveis com os valores que serão comparados.*/
+        var numeroPrimeiro = 5
+        var numeroSegundo = 23
+        var numeroTerceiro  = 45
+
+        if(numeroPrimeiro > numeroSegundo && numeroPrimeiro > numeroTerceiro){
+            console.log('numero primeiro é o maior numero')
+        }else 
+        if(numeroSegundo > numeroTerceiro)
+        {
+            console.log(console.log('numero Segundo é o maior numero'))
+        }else {
+            console.log('numero terceiro é o maior numero')
+        }
+
+        /*Faça um programa que, dado um valor definido numa variável, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.*/
+        var valor = -5 
+
+        if(valor > 0) {
+            console.log('positive')
+        }else 
+        if(valor < 0){
+            console.log('negative')
+        }else{
+            console.log(0)
+        }
+        
+        /*
+        Faça um programa que defina três variáveis com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false , caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro. */
+        var lado01 = 25
+        var lado02 = 25
+        var lado03 = 25
+
+        if(lado01 === lado02 && lado01 === lado03){
+            triangulo = 'é triangulo'
+        }else {
+            triangulo = 'não é triangulo'
+        }
+
+        console.log(triangulo)
+
+
+
+/*
+        Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
+            Porcentagem >= 90 -> A
+            Porcentagem >= 80 -> B
+            Porcentagem >= 70 -> C
+            Porcentagem >= 60 -> D
+            Porcentagem >= 50 -> E
+            Porcentagem < 50 -> F
+O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.*/
+
+var notafinal = -1
+
+    if(notafinal >= 90){
+        console.log('A')
+    }else  if(notafinal >= 80){
+        console.log('B')
+    }else if(notafinal >= 70){
+        console.log('C')
+    }else  if(notafinal >= 60){
+        console.log('D')
+    }else  if(notafinal >= 50){
+        console.log('E')
+    }else if(notafinal < 50 && notafinal >= 0){
+        console.log('F')
+    }else if(notafinal < 0){
+        console.log('Erro!! Nota invalida')
+    }
+    /*
+    Escreva um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
+*/
+
+    var number01 = 221
+    var number02 = 21
+    var number03 = 210
+
+    if(number01 %2 && number02 %2 && number03 %2) {
+        console.log('false')
+    }else {
+        console.log('verdadeiro')
+    }
+
+    /*
+    Escreva um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .*/
+    var number_1 = 221
+    var number_2 = 21
+    var number_3 = 211
+
+    if(number_1 %2 && number_2 %2 && number_3 %2) {
+        console.log('verdadeiro')
+    }else {
+        console.log('false')
+    }
+/* vi o gabarito*/
+//     Escreva um programa que se inicie com dois valores em duas variáveis diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
+// Atente que, sobre o custo do produto, incide um imposto de 20%.
+// Seu programa também deve emitir uma mensagem de erro e encerrar caso algum dos seus valores de entrada seja menor que zero.
+// O lucro de um produto é o resultado da subtração do valor de venda pelo custo do mesmo, sendo que o imposto de 20% também faz parte do valor de custo.
+// valorCustoTotal = valorCusto + impostoSobreOCusto
+// lucro = valorVenda - valorCustoTotal (lucro de um produto)
+
+let custoDoProduto = 1;
+let vaolorDeVenda = 3;
+
+if (custoDoProduto >= 0 && vaolorDeVenda >= 0) {
+  let totalcustoDoProduto = custoDoProduto * 1.2;
+  let total = (vaolorDeVenda - totalcustoDoProduto) * 1000;
+  console.log(total);
+} else {
+  console.log("Error, os valores não podem ser negativos");
+};
+
+
+// peguei o gabarito
+// Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
+// A notação para um salário de R$1500,10, por exemplo, deve ser 1500.10. Para as faixas de impostos, use as seguintes referências:
+// INSS
+// Salário bruto até R$ 1.556,94: alíquota de 8%
+// Salário bruto de R$ 1.556,95 a R$ 2.594,92: alíquota de 9%
+// Salário bruto de R$ 2.594,93 a R$ 5.189,82: alíquota de 11%
+// Salário bruto acima de R$ 5.189,82: alíquota máxima de R$ 570,88
+// IR
+// Até R$ 1.903,98: isento de imposto de renda
+// De R$ 1.903,99 a 2.826,65: alíquota de 7,5% e parcela de R$ 142,80 a deduzir do imposto
+// De R$ 2.826,66 a R$ 3.751,05: alíquota de 15% e parcela de R$ 354,80 a deduzir do imposto
+// De R$ 3.751,06 a R$ 4.664,68: alíquota de 22,5% e parcela de R$ 636,13 a deduzir do imposto
+// Acima de R$ 4.664,68: alíquota de 27,5% e parcela de R$ 869,36 a deduzir do imposto.
+// Exemplo : Uma pessoa possui o salário bruto de R$ 3.000,00. O cálculo será:
+// O salário bruto está entre R$ 2.594,93 e R$ 5.189,82, então sua alíquota para INSS é de 11%. O INSS será 11% de R$ 3.000, ou seja, R$ 330,00.
+// Para descobrir o salário-base, subtraia do salário bruto a alíquota do INSS: R$ 3.000,00 - R$ 330,00 = R$ 2.670,00.
+// Para pegar o valor do IR, temos um salário (já deduzido o INSS) entre R$ 1.903,99 e 2.826,65, sendo a alíquota, então, de 7.5%, com parcela de R$ 142,80 a deduzir do imposto. Assim, temos:
+// R$ 2.670,00: salário com INSS já deduzido;
+// 7.5%: alíquota de imposto de renda;
+// R$ 142,80 parcela a se deduzir do imposto.
+// Fazendo a conta, temos: (7,5% de R$ 2.670,00) - R$ 142,80 = R$ 57,45
+// O último cálculo para conseguir o salário líquido é R$ 2.670,00 - R$ 57,45 (salário-base - valor IR) = R$ 2.612,55.
+// Resultado: R$ 2.612,55.
+// Dica: que tal identificar as alíquotas com variáveis de nomes explicativos?
+let aliquotINSS;
+let aliquotIR;
+
+let grossSalary = 2000.00;
+
+if (grossSalary <= 1556.94) {
+  aliquotINSS = grossSalary * 0.08;
+} else if (grossSalary <= 2594.92) {
+  aliquotINSS = grossSalary * 0.09;
+} else if (grossSalary <= 5189.82) {
+  aliquotINSS = grossSalary * 0.11;
+} else {
+  aliquotINSS = 570.88;
+}
+
+let baseSalary = grossSalary - aliquotINSS;
+
+if (baseSalary <= 1903.98) {
+  aliquotIR = 0;
+} else if (baseSalary <= 2826.65) {
+  aliquotIR = (baseSalary * 0.075) - 142.80;
+} else if (baseSalary <= 3751.05) {
+  aliquotIR = (baseSalary * 0.15) - 354.80;
+} else if (baseSalary <= 4664.68) {
+  aliquotIR = (baseSalary * 0.225) - 636.13;
+} else {
+  aliquotIR = (baseSalary * 0.275) - 869.36;
+};
+
+console.log("Salário: " + (baseSalary - aliquotIR));
+
+
+    </script>
+</body>
+</html>
