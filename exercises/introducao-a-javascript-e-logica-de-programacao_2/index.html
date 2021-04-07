@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        // Exercicios do 1 ao 6
+        // Exercicios do 1 ao 5
         let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27]
                 var sum = 0
             for(i = 0; i < numbers.length; i+= 1) {
@@ -49,6 +49,31 @@
         } else {
           console.log(result);
         }
+
+
+        // 07- Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+        for (let index = 0; index < numbers.length; index += 1) {
+          if (numbers[index] < smallestNumber) {
+          smallestNumber = numbers[index];
+        }
+      }
+
+    console.log(smallestNumber);
+
+
+
+      // 08- Utilizando for , crie uma array que vá de 1 até 25 e imprima o resultado;
+      let numbers = [];
+
+        for (let index = 1; index <= 25; index += 1) {
+          numbers.push(index);
+        }
+
+        console.log(numbers);
+      // 09-Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+      for (let index = 0; index < numbers.length; index += 1) {
+          console.log(numbers[index] / 2);
+        };
     </script>
 </body>
 </html>
