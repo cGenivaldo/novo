@@ -56,7 +56,7 @@
     </style>
   </head>
   <body>
-      <!-- <h1>Exercício 5.2 - JavaScript DOM </h1>
+      <h1>Exercício 5.2 - JavaScript DOM </h1>
       <div class="main-content">
         <div class="center-conten">
             <p>Eu não sei oque escrever aqui</p>
@@ -78,14 +78,29 @@
                 <li>Dez</li>              
             </ul>
         </div>
-      </div> -->
+        <h3>Escrevendo qualquer coisa</h3>
+        <h3>Escrevendo qualquer coisa</h3>
+        <h3>Escrevendo qualquer coisa</h3>
+      </div>
     <script>
+      // Exercicio - 01  Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body
       const aga1 = document.createElement('h1')
       aga1.innerHTML = 'Exercício 5.2 - JavaScript DOM'
       document.body.appendChild(aga1)      
+      // Adicione a classe title na tag h1 criada
       const title = document.getElementsByTagName('h1')[0]
       title.className = 'title'
       
+      // Exercicio - 02  Adicione a tag div com a classe main-content como filho da tag body ;   
+      const criaDiv = document.createElement('div')
+      criaDiv.className = 'main-content'
+      document.body.appendChild(criaDiv)
+      //Adicione a classe description nas 3 tags h3 criadas;
+      const descricao = document.getElementsByTagName('h3')
+      for (let index = 0; index < 3; index +=1) {
+        descricao[index].className = 'description'
+      }
+
     </script>
   </body>
 </html>
