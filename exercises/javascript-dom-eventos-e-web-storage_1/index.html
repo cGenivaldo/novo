@@ -69,7 +69,19 @@
           }
           corrigeErro()
         // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+          function mudaTag() {
+            let texto = document.getElementsByTagName('p')[0]
+            texto.innerHTML = texto.innerHTML.toUpperCase()
+          }
+          mudaTag()
         // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+          function mostraTag() {
+            let texts = document.getElementsByTagName('p')
+            for (let index = 0; index < texts.length; index += 1) {
+              console.log(texts[index].innerHTML)
+            }
+          } 
+         mostraTag()
         
     </script>
   </body>
