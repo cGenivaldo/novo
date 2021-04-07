@@ -1,12 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloco 5 - JavaScript: DOM, Eventos e Web Storage</title>
-</head>
-<body>
-    
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 00000%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+      <!-- <h1>Exercício 5.2 - JavaScript DOM </h1>
+      <div class="main-content">
+        <div class="center-conten">
+            <p>Eu não sei oque escrever aqui</p>
+        </div>
+        <div class="left-content">
+            <img src="https://picsum.photos/200 ">
+        </div>
+        <div class="right-left">
+            <ul>
+                <li>Um</li>
+                <li>Dois</li>
+                <li>Três</li>
+                <li>Quatro</li>
+                <li>Cinco</li>
+                <li>Seis</li>
+                <li>Sete</li>
+                <li>Oito</li>
+                <li>Nove</li>
+                <li>Dez</li>              
+            </ul>
+        </div>
+      </div> -->
+    <script>
+      const aga1 = document.createElement('h1')
+      aga1.innerHTML = 'Exercício 5.2 - JavaScript DOM'
+      document.body.appendChild(aga1)      
+      const title = document.getElementsByTagName('h1')[0]
+      title.className = 'title'
+      
+    </script>
+  </body>
 </html>
