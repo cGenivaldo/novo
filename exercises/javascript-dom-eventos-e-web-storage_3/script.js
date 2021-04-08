@@ -40,9 +40,24 @@ function createDaysOfTheMonth() {
       getDaysList.appendChild(dayItem)
     } else {
       dayItem.innerHTML = day
-      dayItem.className = 'day'
+      dayItem.className = 'day' 
       getDaysList.appendChild(dayItem)
     }
   }
 }
 createDaysOfTheMonth()
+
+
+function createHolidayButton(buttonName) {
+  let  buttonContainer = document.querySelector('.buttons-container')
+  let newButton = document.createElement('button')
+  let newButtonId = 'btn-holiday'
+
+  
+  newButton.innerHTML = buttonName
+  newButton.id = newButtonId
+  buttonContainer.appendChild(newButton)
+}
+
+
+createHolidayButton('Feriados')
