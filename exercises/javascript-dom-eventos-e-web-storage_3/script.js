@@ -1,63 +1,48 @@
-const divUm = document.getElementById('divUm');
-const divDois = document.getElementById('divDois');
-const divTres = document.getElementById('divTres');
-const input = document.getElementById('input');
-const myWebpage = document.getElementById('mySpotrybefy');
+function createDaysOfTheWeek() {
+  const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+  const weekDaysList = document.querySelector('.week-days');
+
+  for (let index = 0; index < weekDays.length; index += 1) {
+    const days = weekDays[index];
+    const dayListItem = document.createElement('li');
+    dayListItem.innerHTML = days;
+
+    weekDaysList.appendChild(dayListItem);
+  };
+};
+
+createDaysOfTheWeek();
+
+// Escreva seu código abaixo.
 
 
-// 1. Copie esse arquivo e edite apenas ele;
+const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
-// 2. Crie uma função que adicione a classe 'tech' ao elemento selecionado;
-// 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-// 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
-// com a classe 'tech';
-// 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
-// redirecione para alguma página;
-// 4.1. Que tal redirecionar para seu portifólio?
+function createDaysOfTheMonth() {
 
-// 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
-// a cor do mesmo;
-  
-function addClass(event) {
-    document.getElementsByClassName('tech')[0].innerText = event.target.value
+  let getDaysList = document.querySelector('#days')
+
+  for (let index = 0; index < dezDaysList.length; index += 1) {
+    let day = dezDaysList[index]
+    let dayItem = document.createElement('li')
+
+    if (day === 24 | day === 31) {
+      dayItem.className = 'day holiday'
+      dayItem.innetHTML = day;
+      getDaysList.appendChild(dayItem)
+    } else if (day === 4 | day === 11 | day === 18) {
+      dayItem.className = 'day friday'
+      dayItem.innerHTML = day
+      getDaysList.appendChild(dayItem)
+    } else if (day === 25) {
+      dayItem.className = 'day friday holiday'
+      dayItem.innetHTML = day
+      getDaysList.appendChild(dayItem)
+    } else {
+      dayItem.innerHTML = day
+      dayItem.className = 'day'
+      getDaysList.appendChild(dayItem)
+    }
   }
-
-    function findElement(event) {
-    document.getElementsByClassName('tech')[0].classList.remove('tech')
-    event.target.classList.add('tech')
-  }
-
-
-  function changeColor(event){
-    event.target.style.color = 'orange';
-  }
-
-divUm.addEventListener('click', findElement)
-divDois.addEventListener('click', findElement)
-divTres.addEventListener('click', findElement)
-
-input.addEventListener('input', addClass)
-
-
-function changeElement() {
-  window.location.replace('https://github.com/cGenivaldo')
 }
-myWebpage.addEventListener('mouseover', changeColor)
-myWebpage.addEventListener('mouseover', changeElement  )
-
-
-
-// Segue abaixo um exemplo do uso de event.target:
-
-
-function resetText(event) {
-  // O Event é passado como um parâmetro para a função.
-  event.target.innerText = 'Opção reiniciada';
-  // O event possui várias propriedades, porém a mais usada é o event.target,
-  // que retorna o objeto que disparou o evento.
-}
-
-divUm.addEventListener('dblclick', resetText);
-// Não precisa passar o parâmetro dentro do addEventListener. O próprio
-// navegador fará esse trabalho por você, não é legal? Desse jeito, o
-// event.target na nossa função retornará o objeto 'divUm'.	
+createDaysOfTheMonth()
