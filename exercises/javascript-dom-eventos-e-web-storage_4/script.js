@@ -5,6 +5,15 @@ window.onload = function() {
 		content.style.backgroundColor = color
 		localStorage.setItem('backgroundColor', color)
 	}	
+  // Alterando a cor de fundo
+let botaoCorDeFundo = document.querySelectorAll('#background-color>button') 
+for (let index = 0; index < botaoCorDeFundo.length; index += 1) {
+	 botaoCorDeFundo[index].addEventListener('click', function(event) {
+	 	mudaCorDeFundo(event.target.innerHTML)
+	 })
+}
+
+
   // Botões cores da fonte
   function mudaCorDaFonte(color) {
     let paragrafos = document.querySelectorAll('.paragraph')
@@ -13,15 +22,6 @@ window.onload = function() {
     }
     localStorage.setItem('font-color', color)
   }
-
-// Alterando a cor de fundo
-let botaoCorDeFundo = document.querySelectorAll('#background-color>button') 
-for (let index = 0; index < botaoCorDeFundo.length; index += 1) {
-	 botaoCorDeFundo[index].addEventListener('click', function(event) {
-	 	mudaCorDeFundo(event.target.innerHTML)
-	 })
-}
-
 // Alterando a cor da fonte
 let fontesDoBotao = document.querySelectorAll("#font-color>button")
 for (let index = 0; index < fontesDoBotao.length; index += 1) {
@@ -30,6 +30,23 @@ for (let index = 0; index < fontesDoBotao.length; index += 1) {
   })
 }
 
+// botões tamanho da fonte
+function alteraTamanhoFonte(size) {
+  let paragrafos = document.querySelectorAll('.paragraph')
+  for (let index = 0; index < paragrafos.length; index += 1) {
+    paragrafos[index].style.fontSize = size
+  }
+  localStorage.setItem('fontSize', size)
+}
+ // Alterando o tamanho da fonte
+ let fonteTamanhoBotao = document.querySelectorAll('#font-size>button')
+ for (let index = 0; index < fonteTamanhoBotao.length; index += 1) {
+   fonteTamanhoBotao[index].addEventListener('click', function(event) {
+     alteraTamanhoFonte(event.target.innerHTML)
+   })
+ }
+
+
 // Inicialização
 function inicializa () {
 	let corDeFundo = localStorage.getItem('backgroundColor')
@@ -37,6 +54,9 @@ function inicializa () {
 
   let corDaFonte = localStorage.getItem('fontColor')
   if (corDaFonte) mudaCorDaFonte(corDaFonte)
+
+  let tamanhoFonte = localStorage.getItem('fontSize')
+  if (tamanhoFonte) alteraTamanhoFonte(tamanhoFonte)
 
 }
 
