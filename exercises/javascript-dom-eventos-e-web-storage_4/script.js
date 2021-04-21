@@ -47,6 +47,22 @@ function alteraTamanhoFonte(size) {
  }
 
 
+// Altera os espaçamento entreas os caracteres
+function espacamentosLinhas(height) {
+  let paragrafos = document.querySelectorAll('.paragraph')
+  for (let index = 0; index < paragrafos.length; index += 1) {
+    paragrafos[index].style.lineHeight = height
+  }
+  localStorage.setItem('lineHeight', height)
+} 
+let botoesEspacamentos = document.querySelectorAll('#line-height>button')
+for (let index = 0; index < botoesEspacamentos.length; index +=1) {
+  botoesEspacamentos[index].addEventListener('click', function(event) {
+    espacamentosLinhas(event.target.innerHTML)
+  })
+}
+
+
 // Inicialização
 function inicializa () {
 	let corDeFundo = localStorage.getItem('backgroundColor')
@@ -57,6 +73,9 @@ function inicializa () {
 
   let tamanhoFonte = localStorage.getItem('fontSize')
   if (tamanhoFonte) alteraTamanhoFonte(tamanhoFonte)
+
+  let espacamentosLinhas = localStorage.getItem('lineHeight')
+  if (espacamentosLinhas) espacamentosLinhas(espacamentosLinhas)
 
 }
 
