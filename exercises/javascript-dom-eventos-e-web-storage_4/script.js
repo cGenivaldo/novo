@@ -47,7 +47,7 @@ function alteraTamanhoFonte(size) {
  }
 
 
-// Altera os espaçamento entreas os caracteres
+// Altera os espaçamento entre os caracteres
 function espacamentosLinhas(height) {
   let paragrafos = document.querySelectorAll('.paragraph')
   for (let index = 0; index < paragrafos.length; index += 1) {
@@ -56,9 +56,23 @@ function espacamentosLinhas(height) {
   localStorage.setItem('lineHeight', height)
 } 
 let botoesEspacamentos = document.querySelectorAll('#line-height>button')
-for (let index = 0; index < botoesEspacamentos.length; index +=1) {
+for (let index = 0; index < botoesEspacamentos.length; index += 1) {
   botoesEspacamentos[index].addEventListener('click', function(event) {
     espacamentosLinhas(event.target.innerHTML)
+  })
+}
+// Alterando font-family
+function alterandoFontFamily(family) {
+  let paragrafos = document.querySelectorAll('.paragraph')
+  for (let index = 0; index < paragrafos.length; index += 1) {
+    paragrafos[index].style.fontFamily = family
+  }
+  localStorage.setItem('fontFamily', family)
+}
+let botoesFontFamily = document.querySelectorAll('#font-family>button')
+for (let index = 0; index < botoesFontFamily.length; index += 1) {
+  botoesFontFamily[index].addEventListener('click', function(event) {
+    alterandoFontFamily(event.target.innerHTML)
   })
 }
 
@@ -74,8 +88,8 @@ function inicializa () {
   let tamanhoFonte = localStorage.getItem('fontSize')
   if (tamanhoFonte) alteraTamanhoFonte(tamanhoFonte)
 
-  let espacamentosLinhas = localStorage.getItem('lineHeight')
-  if (espacamentosLinhas) espacamentosLinhas(espacamentosLinhas)
+  let espacamentosLinha = localStorage.getItem('lineHeight')
+  if (espacamentosLinha) espacamentosLinhas(espacamentosLinha)
 
 }
 
