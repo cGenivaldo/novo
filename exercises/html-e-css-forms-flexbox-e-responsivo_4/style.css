@@ -1,4 +1,4 @@
-/* 3-Adicione uma propriedade Flexbox que modifique o tamanho padrão do container do menu quando a largura da página for maior que 768px . Após aplicar a propriedade o header deverá estar similar a imagem abaixo: */
+/* 4-Utilize a propriedade align-self no elemento correto para que o header da página tenha o seguinte comportamento: */
 
 * {
   margin: 0;
@@ -30,6 +30,7 @@ body {
 }
 
 .menu-container ul {
+  align-self: center;
   display: flex;
   justify-content: space-around;
   width: 100%;
