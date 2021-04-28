@@ -1,0 +1,48 @@
+body {
+   /* text-align: center; */
+   flex-direction: column;
+}
+h1 {
+ text-align: center;
+ background: orange;
+
+}
+h2 {
+    text-align: center;
+    background: orange;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+figure {
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .container {
+        font-size: 1.1em;
+        text-align: center;
+        width: 100%;
+        display: flex;
+    }
+    body {
+        background: dimgray;
+        font-family: 'Metal Mania', cursive;
+
+    }
+    h1 {
+        text-align: center;
+        background: black;
+        color: orange;
+       }
+       h2 {
+           text-align: center;
+           background: black;
+           color: orange;
+       }
+
+}
+

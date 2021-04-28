@@ -1,0 +1,76 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+ 
+  .container {
+    display: flex;
+    border: 5px solid orange;
+  }
+  p {
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    body {
+      background: black;
+      font-family: sans-serif;
+    }  
+    .container {
+    flex-direction: column;
+    color: lime;
+    };
+    p {
+      padding: 0 5px;
+      line-height: 1.5em;
+    }
+  }
+
+
+
+
+  @media screen and (min-width: 600px) {
+    body {
+      background: lime;
+    }
+    .container {
+      flex-wrap:wrap ;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    body {
+      background-color: lightgreen;
+      
+    }
+    .container {
+      flex-wrap: nowrap;
+    }
+  
+  }
+  
+
+ /* .container-menu {
+   background-color: rgb(26, 33, 121);
+   display: flex;
+ }
+.menu {
+  color: lime;
+  padding: 20px;
+  align-items: center;
+}
+ .menu-nav {
+   flex: 1;
+ }
+
+ .menu-nav ul {
+   float: right;
+   display: flex;
+   list-style: none;
+ }
+
+ .menu-nav ul li {
+   padding: 20px;
+ } */
