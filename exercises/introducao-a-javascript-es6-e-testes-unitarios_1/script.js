@@ -41,3 +41,22 @@ return resultado
 
 console.log(fatorial(5))
 
+// Crie uma função que receba uma frase e retorne qual a maior palavra.
+// Exemplo:
+// longestWord("Antônio foi no banheiro e não sabemos o que aconteceu") 
+// retorna 'aconteceu'
+const maiorPalavra = texto => {
+    let arryPalavra = texto.split(' ')
+    let tamanho = 0
+    let resultado = ''
+
+    for (const palavra of arryPalavra) {
+      if (palavra.length > tamanho) {
+        tamanho = palavra.length
+        resultado = palavra
+      }
+    }
+    return resultado
+  }
+
+  console.log(maiorPalavra("Antonio foi no banheiro e não sabemos o que aconteceu"))
