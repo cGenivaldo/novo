@@ -60,3 +60,11 @@ const maiorPalavra = texto => {
   }
 
   console.log(maiorPalavra("Antonio foi no banheiro e não sabemos o que aconteceu"))
+
+
+
+let contaClick = 0
+let botao = document.getElementById('text')
+
+document.getElementById('button')
+.addEventListener('click', () =>  botao.innerHTML = contaClick += 1)
