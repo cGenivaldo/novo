@@ -16,3 +16,4 @@ const newEmployees = (generator) => {
   }
 
   console.log(newEmployees(generator))
+
