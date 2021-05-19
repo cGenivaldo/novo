@@ -26,9 +26,8 @@ const jupiter = {
     measurementUnit: "kilometers",
   },
 };
-
 console.log(planetDistanceFromSun(mars)); // A
 console.log(planetDistanceFromSun(venus)); // B
 console.log(planetDistanceFromSun(jupiter)); // C
 
-// A ordem é 1°-A  2°-B 3°-C
+// A ordem é 1°-A  2°-B 3°-C 
