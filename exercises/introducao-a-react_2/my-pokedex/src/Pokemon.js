@@ -1,35 +1,42 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Data from './data';
+import './index.css'
 
-class Pokemon extends React.Component {
-  render () {
-    const { name, type, averageWeight, image } = this.props.pokemon;
+ const Pokemon = () => {
+console.log(Data.length)
+let [ position, setPosition ] = React.useState(0)
 
-    return (
-      <div className="pokemon">
-        <div>
-          <p> {name} </p>
-          <p> {type} </p>
-          <p> 
-              {`Average weight: ${averageWeight.value} ${averageWeight.measurementUnit}`}
-          </p>
-        </div>
-        <img src={image} alt={`${name} sprite`} />
-      </div>
-    );
+  function handleClick() {
+    if(position < Data.length -1){
+      setPosition(position + 1)
+    } else {
+      setPosition(0)
+    }
   }
+  function previousClick() {
+    if(position === 0) {
+    setPosition(position = Data.length -1)
+   } else {
+    setPosition(position -1)
+   }
+  }
+
+  return (
+    <>
+      <section>
+        <div>
+          <p>{Data[position].name}</p>
+          <p>{Data[position].type}</p>
+          <p>{`Avarage weight: ${Data[position].averageWeight.value}${Data[position].averageWeight.measurementUnit}`}</p>
+        </div>
+        <img src={Data[position].image} alt={Data[position].name}/>
+      </section>
+      <section>
+        <button onClick={ previousClick }>left</button>
+        <button onClick={ handleClick }>right</button>
+      </section>
+    </>
+  )
 }
 
-Pokemon.propTypes = {
-  pokemon: PropTypes.shape({
-    name: PropTypes.string,
-    type: PropTypes.string,
-    averageWeight: PropTypes.shape({
-      measurementUnit: PropTypes.string,
-      value: PropTypes.number
-    }),
-    image: PropTypes.string,
-  }).isRequired,
-};
-
-export default Pokemon;
+export default Pokemon
